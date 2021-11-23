@@ -1,0 +1,340 @@
+body {
+    color: #555;
+    margin: 0;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+
+/*MENU DE NAVEGACION*/
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: #eee;
+    /*para quitar la letra al momento de poner el cursor */
+    overflow: hidden;
+    /*para darle transparencia*/
+    opacity: 0.8;
+    transition-duration: 0.6s;
+}
+
+
+/*aplicamos un seudo clase*/
+
+nav:hover {
+    opacity: 1;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    float: left;
+    width: 18%;
+    color: #555;
+    text-align: center;
+    /*eliminar los puntos de la lista*/
+    list-style: none;
+    /*para subir hacia arriba las imagenes*/
+    margin-top: -30px;
+    /*para cambiar la velocidada de la imagen al colocar el cursor*/
+    transition-duration: 0.6s;
+}
+
+
+/*al poner el cursor se muestre la imagen y se coloca hacia abajo*/
+
+li:hover {
+    margin-top: 15px;
+}
+
+.ico {
+    width: 40px;
+    height: 40px;
+}
+
+.capa-ico {
+    width: 100%;
+    height: 30px;
+    /*flota hacia la izquierda*/
+    float: left;
+    /*para que se coloque en el centro*/
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    position: relative;
+    top: -15px;
+}
+
+
+nav+div {
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    border: 6px solid rgba(99, 175, 156, 0.726);
+    border-radius: 10px 80px 80px 10px;
+    background-color: rgba(206, 255, 240, 0.815);
+    margin-top: 300px;
+    padding: 20px 5px 20px 5px;
+    text-align: justify;
+    opacity: 0.9;
+    transition-duration: 1.5s;
+    line-height: 2;
+}
+
+nav+div:hover {
+    background-color: rgba(16, 34, 26, 0.842);
+    color: rgba(238, 238, 238, 0.829);
+    border-color: rgba(99, 175, 156, 0.726);
+    opacity: 1;
+}
+
+.img-pez {
+    width: 210px;
+    height: auto;
+    padding: 20px;
+    float: left;
+    text-align: center;
+}
+
+
+/**/
+
+[src^="pez"] {
+    width: 195px;
+    height: 195px;
+    float: left;
+    border-radius: 150px;
+    border: 2px solid #999;
+    box-shadow: 5px 5px 8px #333;
+}
+
+
+/*hermanos adiacentes*/
+
+.img-pez+div {
+    width: 65%;
+    height: auto;
+    margin: 0 0 30px 10px;
+    overflow: hidden;
+    padding-top: 25px;
+}
+
+
+/*fomfo matino*/
+
+#fondoMarino {
+    width: 100%;
+    height: auto;
+    background-image: url(fondoMarino.jpg);
+    background-size: 100% auto;
+    scroll-padding-bottom: 50px;
+}
+
+#pezPortada {
+    width: 300px;
+    height: 300px;
+    background-image: url(pezPortada.png);
+    background-size: 300px 300px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    z-index: 50;
+}
+
+#algas {
+    width: 400px;
+    height: 280px;
+    background-image: url("alga.png");
+    background-size: 400px 280px;
+    position: absolute;
+    top: 70px;
+    right: 30%;
+    opacity: 0.6;
+}
+
+#anzuelo {
+    width: 50px;
+    height: 150px;
+    background-image: url(anzuelo.png);
+    background-size: 50px 150px;
+    /*para que la imagen quede fija*/
+    position: fixed;
+    top: 0px;
+    right: 5%;
+    z-index: 20;
+    transition-duration: 0.5s;
+}
+
+#anzuelo:hover {
+    margin-top: 20px;
+}
+
+#b1,
+#b2,
+#b3,
+#b4 {
+    width: 30px;
+    height: 30px;
+    background-image: url("burbuja.png");
+    background-size: 30px 30px;
+    position: absolute;
+    top: 330px;
+    right: 100px;
+    opacity: 0.3;
+    z-index: 20;
+}
+
+#b1 {
+    animation-name: bUno;
+    animation-direction: 23s;
+    /*para que se pueda ver en otros navegadores*/
+    -webkit-animation-name: bUno;
+    -webkit-animation-duration: 23s;
+    /*la burbuja transite de manera indefinida*/
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bUno {
+    from {}
+    /*saldra 500px fuera de la pantalla*/
+    to {
+        margin-top: -500px;
+    }
+}
+
+#b2 {
+    animation-name: bDos;
+    animation-direction: 15s;
+    -webkit-animation-name: bDos;
+    -webkit-animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bDos {
+    from {
+        margin-right: 550px;
+    }
+    to {
+        margin-top: -500px;
+        margin-right: 550px;
+    }
+}
+
+#b3 {
+    animation-name: bTres;
+    animation-direction: 33s;
+    -webkit-animation-name: bTres;
+    -webkit-animation-duration: 33s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bTres {
+    from {
+        /*se separa la cantidad de px */
+        margin-right: 190px;
+    }
+    to {
+        margin-top: -500px;
+        margin-right: 195px;
+    }
+}
+
+#b4 {
+    animation-name: bCuatro;
+    animation-direction: 20s;
+    -webkit-animation-name: bCuatro;
+    -webkit-animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bCuatro {
+    from {
+        margin-right: 350px;
+    }
+    to {
+        margin-top: -500px;
+        margin-right: 350px;
+    }
+}
+
+#pezRayado,
+#pecesAtras,
+#bancoPecesRapidos,
+#bancoPeceslentos {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-size: 200px 200px;/*alto y ancho de las imagenes*/
+}
+
+#pezRayado {
+    background-image: url(pezRayado.png);
+    top: 100px;
+    z-index: 40;
+    -webkit-animation-name: pezRayado;
+    -webkit-animation-duration: 100s;
+    animation-name: pezRayado;
+    animation-duration: 50s;
+    /*animacion indefinda*/
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pezRayado{
+    from{margin-left: -200px;}
+    to{margin-left: 2200px;}
+}
+
+#pecesAtras {
+    background-image: url(pecesAtras.png);
+    top: 50px;
+    z-index: 0;
+    -webkit-animation-name: pecesAtras;
+    -webkit-animation-duration: 100s;
+    animation-name: pecesAtras;
+    animation-duration: 100s;
+    /*animacion indefinda*/
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pecesAtras{
+    from{margin-left: -200px;}
+    to{margin-left: 1200px;}
+}
+
+#bancoPecesRapidos{
+width:40%;
+height:200px;
+background-image: url(bancoPecesRapidos.png);
+background-size:100% 200px;
+top:100px;
+left: 1300px;
+-webkit-animation-name:bancoPecesRapidos;
+-webkit-animation-duration: 50s;
+animation-name:bancoPecesRapidos;
+animation-duration: 50s;
+}
+
+@-webkit-keyframes bancoPecesRapidos{
+    form{margin-left:2000px;}
+    to{margin-left: -4000px;}
+}
+
+#bancoPeceslentos{
+width:80%;
+height:250px;
+background-image: url(bancoPeceslentos.png);
+background-size:100% 200px;
+top:100px;
+left: 1300px;
+-webkit-animation-name:bancoPeceslentos;
+-webkit-animation-duration: 60s;
+animation-name:bancoPeceslentos;
+animation-duration: 60s;
+}
+@-webkit-keyframes bancoPeceslentos{
+    form{margin-left:20px;}
+    to{margin-left: -3000px;}
+}
